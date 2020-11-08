@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Search extends Component {
-    render() {
-        return (
-            <input 
-                type="search"
-                placeholder="Procure por heróis"
-                //onChange={data => { console.log(data.target.value) }}
-                style={this.props.style}>
-            </input>
-        );
-    } 
+export default function Search(props) {
+    return (
+        <input 
+            type="search"
+            placeholder="Procure por heróis"
+            //onChange={data => { console.log(data.target.value) }}
+            style={props.style}>
+        </input>
+    );
 }
