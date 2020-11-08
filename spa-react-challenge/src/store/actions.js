@@ -1,3 +1,3 @@
-export const search = () => dispatch => {
+export const loadList = () => dispatch => {
     //TODO
 };
