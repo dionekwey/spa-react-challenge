@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type=search] {
+    background-color: #fdecec;
+    background-image: url('assets/busca/Lupa/Shape.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+    width: 500px;
 }
+
+.main {
+    padding-bottom: 100px;
+}
+
+.footer {
+    background-color: #ff1510;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+@media screen and (max-width: 480px) {}
+@media screen and (min-width: 481px) and (max-width: 768px) {}
+@media screen and (min-width: 769px) and (max-width: 1199px) {}
+@media screen and (min-width: 1200px) {}
