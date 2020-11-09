@@ -1,6 +1,4 @@
 *{
-    margin: 0;
-    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -27,8 +25,46 @@ p {
 }
 
 .main {
+    margin: 0 auto;
     padding-bottom: 100px;
     text-align: center;
+    width: 800px;
+}
+
+.heroes-list {
+    width: 100%;
+}
+
+.heroes-list .hero-block {
+    float: left;
+    padding: 10px;
+    height: 280px;
+    width: 25%;
+}
+
+.heroes-list .hero-block .hero-thumbnail {
+    border-bottom: 3px solid #ff1510;
+    background-position: 50% 50%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 100%;
+    min-height: 200px;
+}
+
+.heroes-list .hero-block .hero-name {
+    color: #404040;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+}
+
+.heroes-list .hero-block .hero-name img {
+    cursor: pointer;
+    float: right;
+    height: 15px;
 }
 
 .footer {
@@ -39,55 +75,22 @@ p {
     bottom: 0px;
 }
 
-.list {
-    text-align: left;
-    margin: 0px 5%;
-    width: 90%;
-}
-
-.list .item {
-    display: inline-block;
-}
-
-.list .item > img {
-    border-bottom: 3px solid #ff1510;
-    cursor: pointer;
-    width: 100%;
-}
-
-.list .item .item-name {
-    width: 100%;
-}
-
-.list .item .item-name span {
-    color: #404040;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.list .item .item-name img {
-    cursor: pointer;
-    float: right;
-    height: 15px;
-}
-
 @media screen and (max-width: 480px) {
-    .list .item {
+    .main {
+        width: 400px;
+    }
+
+    .heroes-list .hero-block {
         width: 100%;
-        margin: 15px 0px;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 720px) {
-    .list .item {
-        width: 46%;
-        margin: 15px 2%;
+@media screen and (min-width: 481px) and (max-width: 799px) {
+    .main {
+        width: 600px;
     }
-}
 
-@media screen and (min-width: 721px) {
-    .list .item {
-        width: 31%;
-        margin: 15px 1%;
+    .heroes-list .hero-block {
+        width: 50%;
     }
 }
