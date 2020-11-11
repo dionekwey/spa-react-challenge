@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
+import styled from 'styled-components';
 
-export default function Search(props) {
-    const [value, setValue] = useState();
-
-    function execute(event) {
-        if (event.key === "Enter") {
-            value && props.onKeyDown && props.onKeyDown(value);
-        }
-    }
-
-    return (
-        <input 
-            type="search"
-            placeholder="Procure por heróis"
-            onChange={data => setValue(data.target.value)}
-            style={props.style}
-            onKeyDown={event => execute(event)}>
-        </input>
-    );
-}
+export const Search = styled.input.attrs({ type: 'search' })`
+    background-image: url('assets/busca/Lupa/Shape.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 12px 20px 12px 40px;
+`;

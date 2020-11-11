@@ -26,23 +26,27 @@ p {
 
 .main {
     margin: 0 auto;
-    padding-bottom: 100px;
+    max-width: 960px;
+}
+
+.main-header {
     text-align: center;
-    width: 800px;
 }
 
 .heroes-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
     width: 100%;
 }
 
-.heroes-list .hero-block {
-    float: left;
-    padding: 10px;
-    height: 280px;
-    width: 25%;
+.hero-block {
+    height: 270px;
+    margin: 1%; 
+    width: 23%;
 }
 
-.heroes-list .hero-block .hero-thumbnail {
+.hero-thumbnail {
     border-bottom: 3px solid #ff1510;
     background-position: 50% 50%; 
     background-repeat: no-repeat;
@@ -52,7 +56,7 @@ p {
     min-height: 200px;
 }
 
-.heroes-list .hero-block .hero-name {
+.hero-name {
     color: #404040;
     cursor: pointer;
     font-weight: bold;
@@ -61,7 +65,7 @@ p {
     width: 100%;
 }
 
-.heroes-list .hero-block .hero-name img {
+.hero-name img {
     cursor: pointer;
     float: right;
     height: 15px;
@@ -76,21 +80,19 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-    .main {
-        width: 400px;
-    }
-
-    .heroes-list .hero-block {
-        width: 100%;
+    .hero-block {
+        width: 98%;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 799px) {
-    .main {
-        width: 600px;
+@media screen and (min-width: 481px) and (max-width: 539px) {
+    .hero-block {
+        width: 48%;
     }
+}
 
-    .heroes-list .hero-block {
-        width: 50%;
+@media screen and (min-width: 540px) and (max-width: 720px) {
+    .hero-block {
+        width: 31.3%;
     }
 }
