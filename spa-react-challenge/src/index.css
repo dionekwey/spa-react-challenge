@@ -5,17 +5,6 @@
     font-family: 'Work Sans';
 }
 
-input[type=search] {
-    background-image: url('assets/busca/Lupa/Shape.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 25px;
-    box-sizing: border-box;
-    font-size: 14px;
-    padding: 12px 20px 12px 40px;
-}
-
 h1, h2 {
     color: #404040;
 }
@@ -27,6 +16,7 @@ p {
 .main {
     margin: 0 auto;
     max-width: 960px;
+    padding-bottom: 50px;
 }
 
 .main-header {
@@ -69,14 +59,6 @@ p {
     cursor: pointer;
     float: right;
     height: 15px;
-}
-
-.footer {
-    background-color: #ff1510;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
 }
 
 @media screen and (max-width: 480px) {

@@ -1,17 +1,29 @@
-import React, { useState, Dispatch } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { Search } from '../components/Search';
 import { HttpGet } from '../components/HttpRequest';
-
 import Logo from '../assets/logo/Group.png';
 import Favorite from '../assets/icones/heart/Path.png';
 
 export default function Home() {
-    const [heroes, setHeroes] = useState([]);
+    const dispatch = useDispatch();
+    const heroes = useSelector(state => state.heroes);
+
+    useEffect(() => {
+        HttpGet(`https://gateway.marvel.com/v1/public/characters`)
+            .then(result => {
+                dispatch({ type: 'LOAD_HEROES_LIST', heroes: result.data.data.results });
+            })
+            .catch(error => console.error(error));
+    }, []);
 
     const findHeroes = (event) => {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && event.target.value) {
             HttpGet(`https://gateway.marvel.com/v1/public/characters?nameStartsWith=${event.target.value}`)
-                .then(result => setHeroes(result.data.data.results))
+                .then(result => {
+                    dispatch({ type: 'LOAD_HEROES_LIST', heroes: result.data.data.results })
+                })
                 .catch(error => console.error(error));
         }
     }

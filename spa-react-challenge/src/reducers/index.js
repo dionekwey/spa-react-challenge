@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import globalReducer from '../globalRedux/reducer';
+import heroes from './heroes';
 
 export default combineReducers({
-  global: globalReducer
+    heroes
 });
