@@ -11,7 +11,6 @@ import IconMovie from '../assets/icones/video/Shape@1,5x.svg';
 
 export default function Details(props) {
     const hero = useSelector(state => state.heroes.filter(item => item.id === Number(props.match.params.id))[0]);
-    const favorites = useSelector(state => state.favorites);
     const [comics, setComics] = useState([]);
 
     useEffect(() => {

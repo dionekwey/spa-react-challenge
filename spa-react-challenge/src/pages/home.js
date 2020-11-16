@@ -32,7 +32,7 @@ export default function Home() {
         }
 
         return [];
-    }, [heroes, showOrderned, favoritesOnly]);
+    }, [heroes, showOrderned, favorites, favoritesOnly]);
 
     function sortHeroes(a, b) {
         if (a.name < b.name) return -1;
