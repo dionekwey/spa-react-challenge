@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Search from '../components/Search';
 import Favorite from '../components/Favorite';
+import ToggleSwitch from '../components/ToggleSwitch';
 
 import Logo from '../assets/logo/Group.png';
 import IconFavorite from '../assets/icones/heart/Path.svg';
@@ -54,12 +55,12 @@ export default function Home() {
                     <div className="order-opt">
                         <img src={IconHero} alt="Ordenar" />
                         Ordenar por nome - A/Z
-                        <input type="checkbox" checked={showOrderned} onChange={e => setShowOrderned(e.target.checked)} ></input>
+                        <ToggleSwitch checked={showOrderned} onChange={e => setShowOrderned(e.target.checked)} />
                     </div>
                     <div className="only-favorites">
                         <img src={IconFavorite} alt="Somente favoritos" />
                         Somente favoritos
-                        <input type="checkbox" checked={favoritesOnly} onChange={e => setFavoritesOnly(e.target.checked)} ></input>
+                        <ToggleSwitch checked={favoritesOnly} onChange={e => setFavoritesOnly(e.target.checked)} />
                     </div>
                 </div>
                 <ul className="heroes-list">
