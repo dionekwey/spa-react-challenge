@@ -1,8 +1,12 @@
-*{
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Work Sans';
+    margin: 0;
 }
 
 h1, h2 {
@@ -55,12 +59,6 @@ p {
     width: 100%;
 }
 
-.hero-name img {
-    cursor: pointer;
-    float: right;
-    height: 15px;
-}
-
 .main-content .top-bar {
     display: flex;
     flex-wrap: wrap;
@@ -85,8 +83,119 @@ p {
     margin-right: 10px;
 }
 
+/*.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    border-radius: 34px;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }*/
+
+.details {
+    background-color: #e7f6e7;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 10px 20px 50px 20px;
+}
+
+.details h1, .details h3 {
+    color: #404040;
+}
+
+.details-header {
+    display: flex;
+}
+
+.details .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .info .text {
+    width: 45%;
+}
+
+.details .info .text p {
+    font-size: 12px;
+    text-align: justify;
+    width: 100%;
+}
+
+.details .info .photo {
+    width: 45%;
+}
+
+.details .comics {
+    width: 100%;
+}
+
+.details .comics .list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+
+.details .comics .comic {
+    height: 190px;
+    margin: 1%;
+    width: 14%;
+}
+
+.details .comics .comic p {
+    color: #404040;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
 @media screen and (max-width: 480px) {
-    .main-content .top-bar {
+    .main-content .top-bar, .details .info {
         flex-direction: column;
     }
 
