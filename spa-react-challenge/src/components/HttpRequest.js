@@ -4,8 +4,13 @@ class HttpRequest {
     static instance() {
         const instance = axios.create({
             params: {
-                'apikey': '7edb1622ef4343dd804c55d510932e87',
+                'ts': '1',
+                'apikey': '574228587f34b6cdc0304de1f08c218b',
+                'hash': 'ec4d7844bf3c4af0d5cc523426403cf7',
                 'limit': '100'
+            },
+            Headers: {
+                'Accept': '*/*'
             },
             timeout: 10000,
             method: 'get',
