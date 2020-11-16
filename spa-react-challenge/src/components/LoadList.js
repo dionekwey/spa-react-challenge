@@ -19,7 +19,7 @@ export default function LoadList() {
                 dispatch({ type: 'LOAD_HEROES_LIST', heroes: result.data.data.results });
             })
             .catch(error => console.error(error));
-    }, []);
+    }, [dispatch]);
 
     return (
         <></>
