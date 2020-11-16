@@ -5,7 +5,6 @@ class HttpRequest {
         const instance = axios.create({
             params: {
                 'apikey': '7edb1622ef4343dd804c55d510932e87',
-                'Referrer': 'https://epic-wozniak-843c73.netlify.app/',
                 'limit': '100'
             },
             timeout: 10000,
