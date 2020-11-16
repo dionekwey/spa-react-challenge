@@ -46,11 +46,11 @@ export default function Details(props) {
                         <div className="statistics">
                             <div>
                                 <p><b>Quadrinhos</b></p>
-                                <p><img src={IconBook} /><b>{hero.comics.available}</b></p>
+                                <p><img src={IconBook} alt="Icone" /><b>{hero.comics.available}</b></p>
                             </div>
                             <div>
                                 <p><b>Filmes</b></p>
-                                <p><img src={IconMovie} /><b>{hero.series.available}</b></p>
+                                <p><img src={IconMovie}  alt="Icone" /><b>{hero.series.available}</b></p>
                             </div>
                         </div>
                         <p><b>Último quadrinho:</b> {new Date(hero.modified).toLocaleDateString('pt-br', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
