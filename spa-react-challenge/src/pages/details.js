@@ -53,8 +53,8 @@ export default function Details(props) {
                                 <p><b>Filmes</b></p>
                                 <p><img src={IconMovie} /><b>{hero.series.available}</b></p>
                             </div>
-                            <p><b>Último quadrinho:</b> {new Date(hero.modified).toLocaleDateString('pt-br', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
                         </div>
+                        <p><b>Último quadrinho:</b> {new Date(hero.modified).toLocaleDateString('pt-br', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
                     </div>
                     <div className="photo">
                         <img src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} width="100%" alt="Foto" />

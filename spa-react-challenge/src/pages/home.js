@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import Search from '../components/Search';
-
 import Favorite from '../components/Favorite';
+
 import Logo from '../assets/logo/Group.png';
 import IconFavorite from '../assets/icones/heart/Path.svg';
 import IconHero from '../assets/icones/heroi/noun_Superhero_2227044@1,5x.svg';

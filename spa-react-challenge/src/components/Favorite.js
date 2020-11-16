@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import firebase from '../firebaseConnection';
+
 import IconFavoriteOn from '../assets/icones/heart/Path.svg';
 import IconFavoriteOff from '../assets/icones/heart/Path Copy 2@1,5x.svg';
 
@@ -12,6 +14,7 @@ export default function Favorite(props) {
         // Remove if exists
         if (favorites.findIndex(favId => favId === id) > -1) {
             dispatch({ type: 'REMOVE_FAVORITE', id });
+            firebase.database().ref('favorites').child(id).set(null);
             return;
         }
 
@@ -22,6 +25,7 @@ export default function Favorite(props) {
         }
 
         dispatch({ type: 'ADD_FAVORITE', id });
+        firebase.database().ref('favorites').child(id).set(id);
     }
 
     function getFavoriteIcon(id) {

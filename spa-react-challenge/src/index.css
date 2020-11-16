@@ -9,18 +9,18 @@ body {
     margin: 0;
 }
 
-h1, h2 {
-    color: #404040;
-}
-
-p {
-    color: #8c8c8c;
-}
-
 .main {
     margin: 0 auto;
     max-width: 960px;
     padding-bottom: 50px;
+}
+
+.main h1, .main h2 {
+    color: #404040;
+}
+
+.main p {
+    color: #8c8c8c;
 }
 
 .main-header {
@@ -161,9 +161,25 @@ p {
 }
 
 .details .info .text p {
+    color: #8c8c8c;
     font-size: 12px;
     text-align: justify;
     width: 100%;
+}
+
+.details .info .text .statistics {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.details .info .text .statistics > div {
+    width: 48%;
+}
+
+.details .info .text .statistics img {
+    height: 22px;
+    margin-right: 10px;
 }
 
 .details .info .photo {
